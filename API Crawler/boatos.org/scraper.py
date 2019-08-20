@@ -1,6 +1,5 @@
 import scrapy
 
-
 class BrickSetSpider(scrapy.Spider):
     name = "news_scraper"
     start_urls = ['https://www.boatos.org/category/politica']
