@@ -1,0 +1,22 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content">
+  <textarea class="noticia" name="noticia" [(ngModel)]="text" placeholder="Insira o texto aqui"></textarea>
+
+  <button class="enviar" name="enviar" (click)="enviar()">Tá OK?</button>
+
+  <div class='hidden' [class.results]="sent_request">  
+    <div class="message">{{ message }}</div>
+    <div class="indicator" [ngClass]="final"></div>  
+  </div>
+  
+</ion-content>
