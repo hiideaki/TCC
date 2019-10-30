@@ -15,13 +15,11 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
-      icon: 'home'
+      url: '/home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Sobre',
+      url: '/list'
     }
   ];
 
@@ -36,14 +34,6 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      if(this.platform.is('cordova')) {
-        // Checa e, se necessário, requisita permissão para usar localização do dispositivo
-        this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.CAMERA).then((result) => {
-          if(!result.hasPermission) {
-            this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA)
-          }
-        });
-      }
 
       this.statusBar.styleDefault();
       this.splashScreen.hide();

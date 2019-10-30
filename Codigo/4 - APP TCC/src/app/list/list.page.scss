@@ -1,1 +1,49 @@
+$primary: #AFDE9B;
+$secondary: #87AB78;
 
+
+* {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+  
+
+ion-content, ion-toolbar {
+    --background: #AFDE9B;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    font-weight: bolder;
+    // text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    padding: 25px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 25px;
+}
+
+.contact {
+    margin: 50px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contact * {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+}
+
+ion-icon {
+    display: block;
+}

@@ -1,22 +1,28 @@
 <ion-header no-border>
-  <ion-toolbar>
+  <ion-toolbar> <!-- mode="ios" -->
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
+    <img alt="logo" class="logo" height="40" src="assets/img/logo.png"> 
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="content">
+
+
+<ion-content padding class="content" scrollY="false">
+  
   <textarea class="noticia" name="noticia" [(ngModel)]="text" placeholder="Insira o texto aqui"></textarea>
 
-  <button class="enviar" name="enviar" (click)="enviar()">Tá OK?</button>
 
-  <div class='hidden' [class.results]="sent_request">  
+  <div class="hidden" [class.results]="show_results">  
     <div class="message">{{ message }}</div>
     <div class="indicator" [ngClass]="final"></div>  
   </div>
-  
+
 </ion-content>
+
+
+<div class="container-botao">
+  <button class="botao limpar" name="limpar" (click)="limpar()" [class.disabled]="text.length == 0" [disabled]="text.length == 0"><ion-icon name="trash"></ion-icon></button>
+  <button class="botao enviar" name="enviar" (click)="enviar()">Tá OK?</button>
+</div>

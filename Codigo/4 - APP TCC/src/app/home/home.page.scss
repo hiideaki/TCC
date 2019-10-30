@@ -1,8 +1,15 @@
-$primary: #4C00FF;
-$secondary: #3900BF;
+$primary: #AFDE9B;
+$secondary: #87AB78;
 
 * {
   font-family: 'Montserrat';
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .noticia {
@@ -15,19 +22,50 @@ $secondary: #3900BF;
   background-color: #fff;
 }
 
-.content {
-  --ion-background-color: #4C00FF;
+
+ion-content, ion-toolbar {
+  --background: #AFDE9B;
+  color: #fff;
 }
+
+.disabled {
+  background: #eee !important
+}
+
+.disabled > * {
+  color: #ccc !important;
+}
+
+
+.botao {
+  color: #87AB78;
+  font-size: 28px;
+  background: #fff;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px 0;
+}
+
+.container-botao {
+  padding: 10px 15px;
+  background: $primary;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin: 5px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .enviar {
   width: 100%;
-  margin: 15px 0;
-  height: 50px;
-  color: #fff;
-  font-size: 28px;
-  background: $secondary;
-  border-radius: 10px;
-  outline: none;
+  margin-left: 10px;
+}
+
+.limpar, .limpar * {
+  min-width: 50px;
+  transition: .5s;
 }
 
 .indicator {
@@ -35,8 +73,8 @@ $secondary: #3900BF;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: $primary;
-  transition: 1s;
+  background: #fff;
+  transition: .7s;
   margin: 0 6px;
 }
 
@@ -61,6 +99,7 @@ $secondary: #3900BF;
   max-height: 100%;
   padding: 12px 5px;
   color: #000;
+  margin-top: 15px;
 }
 
 .falsa {

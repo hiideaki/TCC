@@ -1,27 +1,38 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Sobre
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
+
+  <div class="container">
+    <p>Com o advento da Internet e a facilidade com a qual uma pessoa tem acesso a ela, um grande volume de informações passou a 
+      circular e atingir uma grande massa de pessoas. Isso também proporcionou um anbiente bastante propício para a divulgação de 
+      fake news, as quais buscam convencer o leitor de algum fato falseado, podendo impactar diversas esferas da sociedade.</p>
+
+    <p>Este projeto buscou amenizar o impacto causado pela desinformação gerada pelas fake news criando, a partir de técnicas de 
+      Ciência de Dados, Aprendizado de Máquina e Processamento de Linguagem Natural, um identificador de fake news.</p>
+
+    <p>O modelo de aprendizado de máquina foi treinado utilizando o conjunto de dados disponibilizado pela Universidade de 
+      São Paulo (USP) chamado Fake.Br corpus e obteve uma acurácia de 0.876693 dentro de um conjunto de teste montado com notícias
+      verdadeiras e falsas. O conjunto está disponibilizado no <a href="https://github.com/roneysco/Fake.br-Corpus">Github</a>.</p>
+
+    <p>Este projeto foi desenvolvido como projeto final do curso de Bacharelado em Ciência da Computação da 
+      Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP) pelo aluno Marcelo Hideaki Iwata Kito.</p>
+
+    
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/hiideaki/"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="https://github.com/hiideaki"><ion-icon name="logo-github"></ion-icon></a>
     </div>
-  -->
+
+
+  </div>
+
 </ion-content>
