@@ -58,7 +58,7 @@ export class HomePage {
     
     if(stringTest.split(' ').length < 20) {
       this.show_results = true
-      this.message = "Insira uma notícia com 20 ou mais caracteres!"
+      this.message = "Insira uma notícia com 20 ou mais palavras!"
       return
     }
 
